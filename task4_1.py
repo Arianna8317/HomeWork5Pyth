@@ -4,10 +4,14 @@
 # Для выполнения расчета для конкретных значений
 # необходимо запускать скрипт с параметрами.
 # """
-# мб я что-то не поняла по условию?
-def wages_calculate( hours, sal, bonus) :
-    return hours*sal + bonus
-h = int( input ("Количество часов = "))
-s = int( input ( "Почасовая ставка = "))
-b = int( input ( "Бонус равен = "))
-print ( f"Зарплата {wages_calculate(h,s,b)}")
+# def wages_calculate( hours, sal, bonus) :
+#     return hours*sal + bonus
+# h = int( input ("Количество часов = "))
+# s = int( input ( "Почасовая ставка = "))
+# b = int( input ( "Бонус равен = "))
+# print ( f"Зарплата {wages_calculate(h,s,b)}")
+from sys import argv
+script, hours_number, salary_per_hour, bonus = argv 
+salary = int(hours_number) * int(salary_per_hour) + int(bonus)
+print (f"Зарплата равна {salary}")
+
